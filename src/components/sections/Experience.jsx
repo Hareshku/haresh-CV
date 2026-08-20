@@ -1,0 +1,40 @@
+import { SectionHeader } from "../ui";
+import { experience } from "../../data/cv";
+import { Briefcase } from "lucide-react";
+
+export default function Experience() {
+  return (
+    <div className="fade-in">
+      <SectionHeader roman="III" kicker="Professional Record" title="Experience" />
+
+      <div className="space-y-5">
+        {experience.map((job) => (
+          <div key={job.role + job.org} className="bg-panel border border-line rounded-lg p-6">
+            <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+              <div className="flex items-start gap-3">
+                <div className="h-9 w-9 rounded-md bg-navy/[0.06] border border-navy/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Briefcase size={15} className="text-navy" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg text-navy">{job.role}</h3>
+                  <p className="text-[13.5px] text-oxblood">{job.org}</p>
+                  <p className="text-[12px] text-slate-light">{job.location}</p>
+                </div>
+              </div>
+              <span className="font-mono text-[12px] text-slate shrink-0">{job.period}</span>
+            </div>
+
+            <ul className="space-y-2 pl-1">
+              {job.points.map((p, i) => (
+                <li key={i} className="flex gap-2.5 text-[13.5px] leading-relaxed text-slate">
+                  <span className="text-brass mt-[7px] h-1 w-1 rounded-full bg-brass shrink-0" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
