@@ -5,7 +5,7 @@ import { GraduationCap } from "lucide-react";
 export default function Education() {
   return (
     <div className="fade-in">
-      <SectionHeader roman="II" kicker="Academic Record" title="Education" />
+      <SectionHeader title="Education" />
 
       <div className="space-y-6">
         {education.map((e) => (
@@ -27,7 +27,6 @@ export default function Education() {
                 </div>
               </div>
 
-              <p className="text-[12px] italic text-slate-light mb-4">{e.note}</p>
 
               <p className="text-[10.5px] uppercase tracking-[0.14em] text-slate mb-2.5">
                 Relevant Coursework

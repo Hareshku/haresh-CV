@@ -5,7 +5,7 @@ import { Briefcase } from "lucide-react";
 export default function Experience() {
   return (
     <div className="fade-in">
-      <SectionHeader roman="III" kicker="Professional Record" title="Experience" />
+      <SectionHeader title="Experience" />
 
       <div className="space-y-5">
         {experience.map((job) => (

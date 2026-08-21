@@ -18,9 +18,9 @@ export function StatCard({ value, suffix, label }) {
     <div className="bg-panel border border-line rounded-lg px-5 py-5">
       <div className="font-display text-3xl text-oxblood leading-none">
         {value}
-        <span className="text-lg text-slate-light">{suffix}</span>
+        <span className="text-[2rem] text-slate-light">{suffix}</span>
       </div>
-      <div className="mt-2 text-[10.5px] uppercase tracking-[0.12em] text-slate">{label}</div>
+      <div className="mt-2 text-[13px] uppercase tracking-[0.12em] text-slate">{label}</div>
     </div>
   );
 }

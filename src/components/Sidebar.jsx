@@ -22,7 +22,7 @@ const NAV = [
   { key: "achievements", label: "Achievements", icon: Award, roman: "I" },
   { key: "education", label: "Education", icon: GraduationCap, roman: "II" },
   { key: "experience", label: "Experience", icon: Briefcase, roman: "III" },
-  { key: "projects", label: "Research & Projects", icon: FlaskConical, roman: "IV" },
+  { key: "projects", label: "Projects", icon: FlaskConical, roman: "IV" },
   { key: "teaching", label: "Teaching & Leadership", icon: Users, roman: "V" },
   { key: "skills", label: "Skills", icon: Sparkles, roman: "VI" },
 ];

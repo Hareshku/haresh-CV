@@ -5,7 +5,7 @@ import { Users } from "lucide-react";
 export default function Teaching() {
   return (
     <div className="fade-in">
-      <SectionHeader roman="V" kicker="Mentorship & Service" title="Teaching & Leadership" />
+      <SectionHeader title="Teaching & Leadership" />
 
       <div className="relative">
         <div className="absolute left-[15px] top-2 bottom-2 w-px bg-line" />

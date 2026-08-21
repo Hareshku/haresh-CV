@@ -4,7 +4,7 @@ import { projects, competitions } from "../../data/cv";
 export default function Projects() {
   return (
     <div className="fade-in">
-      <SectionHeader roman="IV" kicker="Applied Work" title="Research & Projects" />
+      <SectionHeader title="Projects" />
 
       <div className="space-y-5 mb-10">
         {projects.map((p) => (
@@ -38,13 +38,9 @@ export default function Projects() {
       </div>
 
       <div className="bg-navy rounded-lg p-6">
-        <p className="text-[11px] uppercase tracking-[0.18em] text-brass mb-2">
-          Ongoing
-        </p>
         <h3 className="font-display text-lg text-paper mb-3">International Coding Competitions</h3>
         <p className="text-[13px] text-paper/70 leading-relaxed mb-4">
-          Actively competing in algorithmic and applied-research competitions to sharpen
-          formal problem-solving ability alongside applied engineering work — Aug 2025 – Jul 2026.
+          Participated in international coding competitions and continue to engage in algorithmic problem-solving challenges to strengthen my competitive programming and software engineering skills.
         </p>
         <div className="flex flex-wrap gap-2">
           {competitions.map((c) => (

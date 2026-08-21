@@ -5,7 +5,7 @@ export default function Skills() {
   const entries = Object.entries(skills);
   return (
     <div className="fade-in">
-      <SectionHeader roman="VI" kicker="Technical Toolkit" title="Skills" />
+      <SectionHeader title="Skills" />
 
       <div className="grid sm:grid-cols-2 gap-4">
         {entries.map(([group, items]) => (

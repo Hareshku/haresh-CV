@@ -1,9 +1,6 @@
 export const profile = {
   name: "Haresh",
   title: "Software Engineer",
-  focus: "Research Interests: AI Agent Systems, Human-Computer Interaction, Applied Security & ML",
-  tagline:
-    "Software engineer and Stanford-trained educator building at the intersection of AI systems, human-computer interaction, and applied security — seeking a research home for doctoral study.",
   email: "haresh.swe@gmail.com",
   phone: "+92-306-5805656",
   linkedin: "LinkedIn",
@@ -13,46 +10,55 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "3.2", suffix: "/4.0", label: "Undergraduate CGPA" },
-  { value: "5", suffix: "+", label: "Int'l Competitions" },
+  { value: "3.2", suffix: "/4.0", label: "CGPA" },
+  { value: "10", suffix: "+", label: "Competitions" },
   { value: "100", suffix: "+", label: "Students Taught" },
-  { value: "6", suffix: "", label: "Research-Adjacent Projects" },
+  { value: "125", suffix: "", label: "Duolingo" },
 ];
 
 export const achievements = [
-  {
-    tag: "Team Result",
-    category: "Harvard University",
-    title: "CS50x Puzzle Day 2026",
-    detail:
-      "Solved all ten puzzles (10/10) with team at Harvard University's flagship computational puzzle event.",
-  },
+  
   {
     tag: "Selected Trainer",
     category: "Stanford University",
     title: "Code in Place — Section Leader",
-    detail:
-      "Selected from 2,000+ global applicants to join Stanford's teaching team and instruct CS106A Python to 100+ international students.",
+    detail: "Selected from 2,000+ global applicants to join Stanford's teaching team and instruct CS106A Python to 100+ international students.",
+    link: "#", // TODO: replace with certificate / proof URL
+  },
+  {
+    tag: "Top Performar",
+    category: "Harvard University",
+    title: "CS50x Puzzle Day 2026",
+    detail: "Solved all (10/10) logical puzzles with my team at Harvard University's flagship computational puzzle event.",
+    link: "#", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Leadership Fellowship",
     category: "Harvard University",
     title: "Aspire Leaders Program",
-    detail:
-      "Selected for a global leadership development program identifying high-potential emerging leaders.",
+    detail: "Selected for a global leadership development program identifying high-potential emerging leaders.",
+    link: "#", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Global Rank #70",
     category: "Yale University",
     title: "Peaked Hackathon 2026",
-    detail:
-      "Ranked 70th globally, solving 6/10 Peak Circuit challenges using quantum circuit analysis and simulation techniques.",
+    detail: "Ranked 70th globally, solving 6/10 Peak Circuit challenges using quantum circuit analysis and simulation techniques.",
+    link: "#", // TODO: replace with certificate / proof URL
   },
   {
-    tag: "Full Funding",
+    tag: "Scholarship",
     category: "Undergraduate",
     title: "Bachelor's Merit Scholarship",
     detail: "Awarded full tuition scholarship for the entire undergraduate program on academic merit.",
+    link: "#", // TODO: replace with certificate / proof URL
+  },
+  {
+    tag: "AI Hackathons",
+    category: "Lablab.ai",
+    title: "International Participation",
+    detail: "Competed in 10+ international AI hackathons, delivering production-ready AI solutions under tight deadlines.",
+    link: "#", // TODO: replace with certificate / proof URL
   },
 ];
 
@@ -63,7 +69,6 @@ export const education = [
     location: "Jamshoro, Sindh, Pakistan",
     period: "2021 — 2025",
     gpa: "CGPA 3.2 / 4.0",
-    note: "Transcript available on request.",
     coursework: [
       "Agent-Based Intelligent Systems",
       "Computer Networks",
@@ -71,6 +76,7 @@ export const education = [
       "Cloud Computing",
       "Human-Computer Interaction",
       "Database Systems",
+      "Information Security"
     ],
   },
 ];
@@ -105,33 +111,33 @@ export const projects = [
   {
     title: "Code Analysis for Enhanced Software Security using AI",
     period: "2025",
-    type: "Independent Research Project",
+    type: "Personal Project",
     description:
-      "An AI-powered security scanner analyzing Python source code and CI/CD pipelines using AST parsing, rule-based static analysis, and a Random Forest classifier for real-time vulnerability detection.",
+      "An AI-powered security scanner that detects vulnerability patterns in Python source code and CI/CD pipelines. It uses AST parsing, rule-based static analysis, and a Random Forest classifier for real-time vulnerability detection.",
     points: [
-      "Weighted risk-scoring engine spanning 22 named security rules, producing quantitative 0–100 risk scores with severity classification.",
-      "Flask dashboard allowing developers to upload files and instantly receive AI-generated security reports with ML confidence percentages.",
+      "Built a weighted risk-scoring engine covering 22 named security rules. It produces quantitative 0–100 risk scores with severity classification.",
+      "Developed a Flask dashboard that allows developers to upload files and receive AI-generated security reports with ML confidence percentages.",
     ],
     stack: ["Python", "Flask", "scikit-learn", "PyYAML", "pandas"],
   },
   {
-    title: "SkillSwap — Peer-to-Peer Skill Trading Platform",
+    title: "SkillSwap | Peer-to-Peer Skill Trading Platform",
     period: "2025",
     type: "Final Year Project",
     description:
       "A free skill-exchange platform enabling users to trade skills without monetary exchange, designed to support underprivileged learners through collaborative, money-free skill development.",
     points: [
-      "Matching system connecting users by complementary skill needs (e.g., JavaScript ↔ Java).",
-      "Chat, session scheduling, feedback, and contribution-based badges to sustain community engagement.",
+      "Developed a matching system that connects users based on complementary skill needs, such as JavaScript and Java.",
+      "Implemented chat, session scheduling, feedback, and contribution-based badges to support community engagement.",
     ],
     stack: ["React.js", "Tailwind CSS", "Node.js", "Express", "MySQL"],
   },
   {
-    title: "DayOne — AI-Powered Startup Validation Platform",
+    title: "DayOne | AI-Powered Startup Validation Platform",
     period: "Aug 2026",
     type: "AI Factory Native.builder Hackathon",
     description:
-      "Frontend for an AI platform validating startup ideas, integrating real-time AI-agent responses and WebSocket updates with a FastAPI backend.",
+      "Day One is an AI-powered startup validation platform designed to help founders evaluate their ideas before investing significant time and money. Instead of relying on a single AI response, Day One brings together six specialized AI agents representing: Research, Product, Finance, Legal, Marketing, CEO.",
     points: [
       "Focused on responsive UI and clear presentation of AI-generated insights.",
       "Coordinated team task distribution and cross-functional integration with backend engineer.",
@@ -139,11 +145,11 @@ export const projects = [
     stack: ["React", "Tailwind CSS", "FastAPI", "Pydantic", "GPT-4o-mini"],
   },
   {
-    title: "NeuroFocus — BCI-Powered Interaction System",
+    title: "NeuroFocus | BCI-Powered Interaction System",
     period: "Sep 2025",
     type: "The Internet of Agents Hackathon",
     description:
-      "A brain-computer interface system combining EEG, PPG, and motion data to infer user mental states — focus, stress, and fatigue — through an empathetic, LLM-driven adaptive agent.",
+      "A brain-computer interface system that combines EEG, PPG, and motion data to infer user mental states such as focus, stress, and fatigue. It uses an empathetic, LLM-driven adaptive agent.",
     points: [
       "Integrated multiple autonomous agents via the Coral Protocol.",
       "Guided UI/UX design in Figma to support interface accessibility for varying cognitive states.",
@@ -151,28 +157,29 @@ export const projects = [
     stack: ["EEG/PPG Signals", "Coral Protocol", "LLM Agents", "Figma"],
   },
   {
-    title: "Farmer to Customer — Direct Agricultural Marketplace",
+    title: "Farmer to Customer | Direct Agricultural Marketplace",
     period: "Aug – Oct 2025",
     type: "GNEC Hackathon 2025 Fall · Team Lead",
     description:
       "A transparent digital marketplace directly connecting farmers with consumers to eliminate middlemen and promote equitable pricing in Pakistan's agricultural economy.",
-    points: [
-      "Owned backend development and led the team through the full lifecycle: ideation, UI/UX, deployment.",
-      "Designed for rural economic impact — fair compensation and sustainable market access for farmers.",
+    points: [ 
+      "Designed the platform to support fair compensation and sustainable market access for farmers.",
+      "Led backend development and guided the team through the full project lifecycle, from ideation and UI/UX to deployment.",
+     
     ],
     stack: ["React", "Node.js", "Express", "MySQL"],
   },
   {
-    title: "Podify — AI Podcast & Meeting Summarizer",
+    title: "Podify | AI Podcast & Meeting Summarizer",
     period: "Jul – Sep 2025",
-    type: "Code with Kiro",
+    type: "Code with Kiro Hackathon (AWS)",
     description:
-      "A responsive frontend for an AI-powered summarization tool handling real-time transcription and concise meeting/podcast summaries.",
+      "An AI-powered tool that transcribes podcast episodes, generates concise summaries and key insights, and lets users ask questions about the content. It turns long-form podcasts into short, actionable knowledge.",
     points: [
       "Integrated frontend with backend APIs for smooth audio-to-text processing.",
       "Designed UX for real-time transcription readability under live-audio latency.",
     ],
-    stack: ["React", "REST APIs", "Real-time Transcription"],
+    stack: ["React.js", "REST APIs", "FAISS", "OpenAI", "Machine Learning"],
   },
 ];
 
@@ -228,6 +235,6 @@ export const skills = {
 
 export const competitions = [
   "Meta Hacker Cup",
-  "CALICO — UC Berkeley",
+  "CALICO | UC Berkeley",
   "MIT Informatics Tournament",
 ];
