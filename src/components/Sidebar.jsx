@@ -1,6 +1,7 @@
 import { Award, GraduationCap, Briefcase, FlaskConical, Users, Sparkles, Globe, Mail, X, Menu } from "lucide-react";
 import { profile } from "../data/cv";
 import { useState } from "react";
+import profilePic from "../assets/profile.jpeg";
 
 function LinkedinIcon(props) {
   return (
@@ -27,23 +28,27 @@ const NAV = [
   { key: "skills", label: "Skills", icon: Sparkles, roman: "VI" },
 ];
 
-function Initials({ name }) {
-  const letter = name.trim().charAt(0).toUpperCase();
+function ProfilePhoto({ src, alt }) {
   return (
-    <div className="relative mx-auto h-24 w-24">
+    <div className="relative mx-auto h-40 w-40">
       <div className="absolute inset-0 rounded-full border border-brass/50" />
-      <div className="absolute inset-[3px] rounded-full border-2 border-navy flex items-center justify-center bg-navy">
-        <span className="font-display text-3xl text-paper">{letter}</span>
+      <div className="absolute inset-[3px] rounded-full border-2 border-navy overflow-hidden">
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-cover"
+        />
       </div>
     </div>
   );
 }
 
-function SocialIcon({ Icon }) {
+function SocialIcon({ Icon, href }) {
   return (
     <a
-      href="#"
-      onClick={(e) => e.preventDefault()}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="h-9 w-9 rounded-full border border-line flex items-center justify-center text-navy/70 hover:text-oxblood hover:border-oxblood/50 transition-colors"
     >
       <Icon size={15} strokeWidth={1.75} />
@@ -56,25 +61,22 @@ export default function Sidebar({ active, onSelect }) {
 
   const content = (
     <div className="flex h-full flex-col">
-      <div className="px-7 pt-10 pb-6 text-center">
-        <Initials name={profile.name} />
+      <div className="px-7 pt-4 pb-2 text-center">
+        <ProfilePhoto src={profilePic} alt={profile.name} />
         <h1 className="mt-4 font-display text-xl text-navy tracking-tight">{profile.name}</h1>
         <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-slate">{profile.title}</p>
 
         <div className="mt-5 flex justify-center gap-2.5">
-          <SocialIcon Icon={LinkedinIcon} />
-          <SocialIcon Icon={GithubIcon} />
-          <SocialIcon Icon={Globe} />
-          <SocialIcon Icon={Mail} />
-        </div>
+  <SocialIcon Icon={LinkedinIcon} href={profile.linkedin} />
+  <SocialIcon Icon={GithubIcon} href={profile.github} />
+  <SocialIcon Icon={Globe} href={profile.portfolio} />
+  <SocialIcon Icon={Mail} href={`mailto:${profile.email}`} />
+</div>
       </div>
 
       <div className="mx-7 h-px bg-line" />
 
       <nav className="flex-1 px-5 pt-6">
-        <p className="px-2 mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-brass">
-          Table of Contents
-        </p>
         <ul className="space-y-1">
           {NAV.map(({ key, label, icon: Icon, roman }) => {
             const isActive = active === key;

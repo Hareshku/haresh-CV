@@ -1,11 +1,11 @@
 import { SectionHeader, Pill } from "../ui";
 import { education } from "../../data/cv";
-import { GraduationCap } from "lucide-react";
-
+import { GraduationCap, ArrowUpRight } from "lucide-react";
 export default function Education() {
   return (
     <div className="fade-in">
-      <SectionHeader title="Education" />
+      
+<SectionHeader title="Education" icon={GraduationCap} />
 
       <div className="space-y-6">
         {education.map((e) => (
@@ -27,15 +27,40 @@ export default function Education() {
                 </div>
               </div>
 
-
-              <p className="text-[10.5px] uppercase tracking-[0.14em] text-slate mb-2.5">
-                Relevant Coursework
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {e.coursework.map((c) => (
-                  <Pill key={c}>{c}</Pill>
-                ))}
-              </div>
+             {(e.link || e.thesisLink) && (
+  <div className="mt-1 flex items-center gap-5">
+    {e.link && (
+      <a
+        href={e.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group/link inline-flex items-center gap-1 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-oxblood hover:text-brass transition-colors"
+      >
+        View Degree
+        <ArrowUpRight
+          size={13}
+          strokeWidth={2}
+          className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+        />
+      </a>
+    )}
+    {e.thesisLink && (
+      <a
+        href={e.thesisLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group/link inline-flex items-center gap-1 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-oxblood hover:text-brass transition-colors"
+      >
+        View Thesis
+        <ArrowUpRight
+          size={13}
+          strokeWidth={2}
+          className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+        />
+      </a>
+    )}
+  </div>
+)}
             </div>
           </div>
         ))}

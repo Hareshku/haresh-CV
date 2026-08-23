@@ -1,12 +1,10 @@
 import { SectionHeader } from "../ui";
 import { experience } from "../../data/cv";
 import { Briefcase } from "lucide-react";
-
 export default function Experience() {
   return (
     <div className="fade-in">
-      <SectionHeader title="Experience" />
-
+<SectionHeader title="Experience" icon={Briefcase} />
       <div className="space-y-5">
         {experience.map((job) => (
           <div key={job.role + job.org} className="bg-panel border border-line rounded-lg p-6">
@@ -23,7 +21,9 @@ export default function Experience() {
               </div>
               <span className="font-mono text-[12px] text-slate shrink-0">{job.period}</span>
             </div>
-
+            <p className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-brass mb-2.5">
+  Key Contributions
+</p>
             <ul className="space-y-2 pl-1">
               {job.points.map((p, i) => (
                 <li key={i} className="flex gap-2.5 text-[13.5px] leading-relaxed text-slate">

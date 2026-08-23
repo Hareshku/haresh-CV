@@ -5,13 +5,12 @@ import { Users } from "lucide-react";
 export default function Teaching() {
   return (
     <div className="fade-in">
-      <SectionHeader title="Teaching & Leadership" />
-
+<SectionHeader title="Teaching & Leadership" icon={Users} />
       <div className="relative">
         <div className="absolute left-[15px] top-2 bottom-2 w-px bg-line" />
         <div className="space-y-6">
           {teaching.map((t) => (
-            <div key={t.role + t.org} className="relative pl-11">
+            <div key={t.role + t.university} className="relative pl-11">
               <div className="absolute left-0 top-0 h-8 w-8 rounded-full bg-panel border border-line flex items-center justify-center">
                 <Users size={14} className="text-oxblood" strokeWidth={1.75} />
               </div>
@@ -19,9 +18,14 @@ export default function Teaching() {
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                   <div>
                     <h3 className="font-display text-lg text-navy">{t.role}</h3>
-                    <p className="text-[13px] text-oxblood">{t.org}</p>
+                    {t.program && <p className="text-[13px] text-oxblood">{t.program}</p>}
                   </div>
-                  <span className="font-mono text-[11.5px] text-slate shrink-0">{t.period}</span>
+                  <div className="flex flex-col items-end gap-1.5 shrink-0">
+                    <span className="font-mono text-[11.5px] text-slate">{t.period}</span>
+                    <span className="inline-flex items-center rounded-md border border-oxblood/60 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.08em] text-oxblood">
+                      {t.university}
+                    </span>
+                  </div>
                 </div>
                 <ul className="space-y-1.5">
                   {t.points.map((p, i) => (

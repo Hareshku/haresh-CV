@@ -37,6 +37,9 @@ body {
   background: #A9823C;
 }
 
+.border-line {
+  border-color: rgb(196 185 156);
+}
 .fade-in {
   animation: fadeIn 0.45s ease both;
 }

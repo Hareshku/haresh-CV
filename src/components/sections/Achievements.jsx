@@ -1,6 +1,6 @@
 import { SectionHeader, StatCard, Tag } from "../ui";
 import { stats, achievements, profile } from "../../data/cv";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Award } from "lucide-react";
 
 export default function Achievements() {
   return (
@@ -13,7 +13,8 @@ export default function Achievements() {
         ))}
       </div>
 
-      <SectionHeader title="Achievements" />
+    <SectionHeader title="Achievements" icon={Award} />
+
 
       <div className="grid sm:grid-cols-2 gap-4">
         {achievements.map((a) => (

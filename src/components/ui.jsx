@@ -1,14 +1,11 @@
-export function SectionHeader({ roman, title, kicker }) {
+export function SectionHeader({ title, icon: Icon }) {
   return (
-    <div className="mb-9 flex items-start gap-4">
-      <span className="font-mono text-xs text-brass pt-2 shrink-0">{roman}</span>
-      <div className="flex-1">
-        {kicker && (
-          <p className="text-[11px] uppercase tracking-[0.18em] text-slate mb-1.5">{kicker}</p>
-        )}
+    <div className="mb-9">
+      <div className="flex items-center gap-2.5">
+        {Icon && <Icon size={22} className="text-oxblood" strokeWidth={1.75} />}
         <h2 className="font-display text-3xl sm:text-[34px] text-navy tracking-tight">{title}</h2>
-        <div className="mt-4 h-px w-full bg-gradient-to-r from-line via-line to-transparent" />
       </div>
+      <div className="mt-4 h-px w-full bg-gradient-to-r from-line via-line to-transparent" />
     </div>
   );
 }
