@@ -5,7 +5,7 @@ export const profile = {
   phone: "+92-306-5805656",
   linkedin: "https://www.linkedin.com/in/haresh-kumar-9bb353251/",
   github: "https://github.com/Hareshku",
-  portfolio: "https://github.com/Hareshku",
+  portfolio: "https://leetcode.com/u/Haresh2153/",
 };
 
 export const stats = [
@@ -22,21 +22,21 @@ export const achievements = [
     category: "Stanford University",
     title: "Code in Place",
     detail: "Selected from 2,000+ global applicants to join Stanford's teaching team and instruct CS106A Python to 100+ international students.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1dD_FlQXuN35XF3lwLfkD2UT6tz948TGV/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Top Performar",
     category: "Harvard University",
     title: "CS50x Puzzle Day",
     detail: "Solved all (10/10) logical puzzles with my team at Harvard University's flagship computational puzzle event.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/14sAmjoK2CbjLzXtWVpDXyiju5YB5eu3D/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Leadership Fellowship",
     category: "Harvard University",
     title: "Aspire Leaders Program",
     detail: "Selected for a global leadership development program identifying high-potential emerging leaders.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1OySAjWegpEBcV_zajBPSehO0WuZPMpUv/view?usp=sharing", // TODO: replace with certificate / proof URL
   }, 
   {
     tag: "Scholarship",
@@ -50,29 +50,29 @@ export const achievements = [
     category: "Yale University",
     title: "Peaked Hackathon 2026",
     detail: "Ranked in top 13% globally, solving 6/10 Peak Circuit challenges using quantum circuit analysis and simulation techniques.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://www.linkedin.com/posts/haresh-kumar-9bb353251_quantumcomputing-hackathon-yale-activity-7446956721710874624-PN1M?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4qYt8BF-fRJEhZtNkZEc_STzespB84c-U", // TODO: replace with certificate / proof URL
   },
  
   {
     tag: "AI Hackathons",
     category: "Lablab.ai",
     title: "International Participation",
-    detail: "Competed in 10+ international AI hackathons, delivering production-ready AI solutions under tight deadlines.",
-    link: "#", // TODO: replace with certificate / proof URL
+    detail: "Participated in 10+ international AI hackathons and coding competitions, collaborating with global teams to deliver production-ready AI solutions under tight deadlines.",
+    link: "https://drive.google.com/file/d/1toMPirwvp_Qq8iJLJPeIDN-QjeWWBufm/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Coding Competition",
     category: "Facebook (Meta)",
     title: "Meta Hacker Cup",
     detail: "Qualified for Round 1 of Meta Hacker Cup by solving complex algorithmic problems under competitive time constraints.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1J6EIpMI-AlZDLTqH1gy8yFdFGYLsobQc/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Coding Competition",
     category: "UC Berkeley",
     title: "CALICO Coding competition",
     detail: "Solved 3 of 12 problems in CALICO Coding Competition, a three-hour algorithmic contest.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1sQNTp6vQiNQE7uKDgArZiYicZg3Ia_GN/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
 
   {
@@ -80,7 +80,7 @@ export const achievements = [
     category: "MIT",
     title: "MIT Informatics Tournament",
     detail: "Solved 2 of 10 data structures and algorithms problems at the MIT Informatics Tournament.",
-    link: "#", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1OU85pD35hAdB_9R67f-wMsKR-Zfehpp2/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
 ];
 
@@ -91,8 +91,8 @@ export const education = [
     location: "Jamshoro, Sindh, Pakistan",
     period: "2021 - 2025",
     gpa: "CGPA 3.2 / 4.0",
-    link: "thesis link",
-    thesisLink: "this",
+    link: "https://drive.google.com/file/d/1owfI9PiLF-vCAB9YWPtljJBUb1IRYRBN/view?usp=sharing",
+    thesisLink: "https://drive.google.com/drive/folders/1MmXTxekokf4Z9LNwiEAfw7g0EsZlydsI?usp=sharing",
   },
   {
     degree: "Pre-Engineering",
@@ -100,7 +100,7 @@ export const education = [
     location: "Samaro, Sindh, Pakistan",
     period: "2019 - 2021",
     gpa: "90.54%",
-    link: "I did my intermediate in Pre-Engineering from GOVT: Higher Secondary School Samaro town "
+    link: "https://drive.google.com/file/d/1nUXiFsjiwvPAW9jVP5WwYvq3viwsfHpK/view?usp=sharing"
     
   },
 ];
@@ -122,6 +122,7 @@ export const experience = [
     org: "NFTP",
     location: "Onsite - Jamshoro, Sindh, Pakistan",
     period: "November 2022 - March 2023",
+    certLink: "https://drive.google.com/file/d/1_Zo9k5gcc7R2iTfRIJLXjOvREbhMQF6j/view?usp=sharing",
     points: [
       "Developed responsive pages and registration forms using HTML, CSS, JavaScript, and React.",
       "Designed intuitive employee dashboards with Bootstrap and React, cutting design-iteration time by 25%.",
@@ -144,6 +145,7 @@ export const projects = [
       "Implemented chat, session scheduling, feedback, and contribution-based badges to support community engagement.",
     ],
     stack: ["React.js", "Tailwind CSS", "Node.js", "Express", "MySQL"],
+     link: "https://github.com/Hareshku/SkillSwap"
   },
   {
     title: "Code Analysis for Enhanced Software Security using AI",
@@ -157,6 +159,7 @@ export const projects = [
       "Developed a Flask dashboard that allows developers to upload files and receive AI-generated security reports with ML confidence percentages.",
     ],
     stack: ["Python", "Flask", "scikit-learn", "PyYAML", "pandas"],
+    link: "https://github.com/Hareshku/AI-Assisted-Detection-of-Security-Vulnerabilities-in-Software-Codebases."
   },
   {
   title: "Smart Lost & Found Portal",
@@ -170,6 +173,7 @@ export const projects = [
     "Implemented a RESTful Express.js API with JWT and session-based authentication, plus a separate admin dashboard for report and user management.",
   ],
   stack: ["Node.js", "Express.js", "MySQL", "Tailwind CSS", "JWT"],
+  link: "https://github.com/Hareshku/Lost_-_Found_Items"
 },
 {
   title: "E-Learning App",
@@ -197,19 +201,7 @@ export const projects = [
       "Coordinated team task distribution and cross-functional integration with backend engineer.",
     ],
     stack: ["React", "Tailwind CSS", "FastAPI", "Pydantic", "GPT-4o-mini"],
-  },
-  {
-    title: "NeuroFocus | BCI-Powered Interaction System",
-    period: "Sep 2025",
-    type: "The Internet of Agents Hackathon",
-    category: "hackathon",
-    description:
-      "A brain-computer interface system that combines EEG, PPG, and motion data to infer user mental states such as focus, stress, and fatigue. It uses an empathetic, LLM-driven adaptive agent.",
-    points: [
-      "Integrated multiple autonomous agents via the Coral Protocol.",
-      "Guided UI/UX design in Figma to support interface accessibility for varying cognitive states.",
-    ],
-    stack: ["EEG/PPG Signals", "Coral Protocol", "LLM Agents", "Figma"],
+    link: "https://lablab.ai/ai-hackathons/nativebuilder-build-without-limits/redflag-ai/dayone"
   },
   {
     title: "Farmer to Customer | Direct Agricultural Marketplace",
@@ -224,6 +216,7 @@ export const projects = [
      
     ],
     stack: ["React", "Node.js", "Express", "MySQL"],
+    link: "https://devpost.com/software/farmertocustomer"
   },
   {
     title: "Podify | AI Podcast & Meeting Summarizer",
@@ -237,6 +230,7 @@ export const projects = [
       "Designed UX for real-time transcription readability under live-audio latency.",
     ],
     stack: ["React.js", "REST APIs", "FAISS", "OpenAI", "Machine Learning"],
+    link: "https://devpost.com/software/briefypod-smart-insights-for-every-episode"
   },
 ];
 
@@ -247,6 +241,7 @@ export const teaching = [
     university: "Stanford University",
     program: "Code in Place",
     period: "20 April - 30 May 2026",
+    link: "https://drive.google.com/file/d/11IrFOgYkV2cs1JEmpX2W9dDw-9hn72yw/view?usp=sharing",
     points: [
       "Selected from 2,000+ applicants worldwide to join Stanford's global teaching team.",
       "Taught CS106A Python to 100+ international students, fostering an inclusive learning environment.",
@@ -258,6 +253,7 @@ export const teaching = [
     university: "CA, USA",
     program: "iCodeGuru",
     period: "26 Jan - 21 Feb 2026",
+    link: "https://docs.google.com/spreadsheets/d/1z0yfEekz-9mlZV1M5ovOGkEScCDg9tBf9x7YuWvRXlk/edit?usp=sharing",
     points: [
       "Taught Python from basic syntax through advanced concepts.",
       "Guided students through hands-on projects and real-world problem-solving exercises.",
@@ -269,6 +265,7 @@ export const teaching = [
     university: "Online",
     program: "GNEC Hackathon 2025",
     period: "12 Aug - 12 Oct 2025",
+    link: "https://devpost.com/software/farmertocustomer",
      points: [
       "Led a team of Pakistani developers in building the Farmer to Customer platform.",
       "Oversaw the full development lifecycle from ideation and UI/UX design to deployment and final presentation.",
@@ -279,6 +276,7 @@ export const teaching = [
     university: "Mehran University",
     program: "Prime Minister Green Youth Movement (PMGYM)",
     period: "2023 - 2024",
+    link: "https://drive.google.com/file/d/1OMElq_CMuAbZbP6nqWsK_GQHXrL5Xns_/view?usp=sharing",
     points: [
       "Participated in tree-plantation drives, awareness campaigns, and sustainability initiatives.",
       "Promoted environmental responsibility among students and the wider community.",

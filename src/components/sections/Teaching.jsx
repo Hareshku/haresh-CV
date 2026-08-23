@@ -1,11 +1,11 @@
 import { SectionHeader } from "../ui";
 import { teaching } from "../../data/cv";
-import { Users } from "lucide-react";
+import { Users, ArrowUpRight } from "lucide-react";
 
 export default function Teaching() {
   return (
     <div className="fade-in">
-<SectionHeader title="Teaching & Leadership" icon={Users} />
+      <SectionHeader title="Teaching & Leadership" icon={Users} />
       <div className="relative">
         <div className="absolute left-[15px] top-2 bottom-2 w-px bg-line" />
         <div className="space-y-6">
@@ -25,6 +25,21 @@ export default function Teaching() {
                     <span className="inline-flex items-center rounded-md border border-oxblood/60 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.08em] text-oxblood">
                       {t.university}
                     </span>
+                    {t.link && (
+                      <a
+                        href={t.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/link inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-oxblood hover:text-brass transition-colors"
+                      >
+                        View
+                        <ArrowUpRight
+                          size={12}
+                          strokeWidth={2}
+                          className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                        />
+                      </a>
+                    )}
                   </div>
                 </div>
                 <ul className="space-y-1.5">

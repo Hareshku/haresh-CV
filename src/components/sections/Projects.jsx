@@ -1,6 +1,6 @@
 import { SectionHeader, Tag, Pill } from "../ui";
 import { projects, competitions } from "../../data/cv";
-import { FlaskConical, GraduationCap, Trophy } from "lucide-react";
+import { FlaskConical, GraduationCap, Trophy, ArrowUpRight } from "lucide-react";
 
 function ProjectCard({ p }) {
   return (
@@ -10,7 +10,24 @@ function ProjectCard({ p }) {
           <Tag tone="navy">{p.type}</Tag>
           <h3 className="font-display text-lg text-navy mt-2.5">{p.title}</h3>
         </div>
-        <span className="font-mono text-[12px] text-slate shrink-0">{p.period}</span>
+        <div className="flex flex-col items-end gap-1.5 shrink-0">
+          <span className="font-mono text-[12px] text-slate">{p.period}</span>
+          {p.link && (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/link inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-oxblood hover:text-brass transition-colors"
+            >
+              Link
+              <ArrowUpRight
+                size={12}
+                strokeWidth={2}
+                className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+              />
+            </a>
+          )}
+        </div>
       </div>
 
       <p className="text-[13.5px] leading-relaxed text-slate mb-3">{p.description}</p>

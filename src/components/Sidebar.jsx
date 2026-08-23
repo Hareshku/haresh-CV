@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Briefcase, FlaskConical, Users, Sparkles, Globe, Mail, X, Menu } from "lucide-react";
+import {Award, GraduationCap, Briefcase, FlaskConical, Users, Sparkles, Mail, X, Menu } from "lucide-react";
 import { profile } from "../data/cv";
 import { useState } from "react";
 import profilePic from "../assets/profile.jpeg";
@@ -27,6 +27,29 @@ const NAV = [
   { key: "teaching", label: "Teaching & Leadership", icon: Users, roman: "V" },
   { key: "skills", label: "Skills", icon: Sparkles, roman: "VI" },
 ];
+
+function LeetcodeIcon(props) {
+  return (
+    <svg viewBox="0 0 94 105" width="15" height="15" {...props}>
+      <path
+        d="M67.5068 83.0664C70.0005 80.5764 74.0371 80.5829 76.5228 83.081C79.0085 85.579 79.002 89.6227 76.5083 92.1127L65.4351 103.17C55.2192 113.371 38.5605 113.519 28.1722 103.513C28.1122 103.456 23.4866 98.9202 8.22702 83.957C-1.92479 74.0029 -2.93616 58.0749 6.61697 47.8464L24.4287 28.7746C33.91 18.6219 51.3874 17.5123 62.228 26.279L78.4053 39.3621C81.1449 41.5777 81.5728 45.5985 79.3611 48.3429C77.1493 51.0873 73.1354 51.516 70.3958 49.3004L54.2187 36.2173C48.5493 31.6325 38.6319 32.2622 33.7398 37.5007L15.9279 56.5727C11.2772 61.5522 11.7866 69.574 17.1461 74.8292C28.3515 85.817 36.9874 94.2846 36.9974 94.2943C42.3981 99.496 51.1309 99.4185 56.4336 94.1234L67.5068 83.0664Z"
+        fill="#FFA116"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M40.6072 72.0015C37.0862 72.0015 34.2319 69.1422 34.2319 65.6151C34.2319 62.0879 37.0862 59.2286 40.6072 59.2286H87.6249C91.1459 59.2286 94.0002 62.0879 94.0002 65.6151C94.0002 69.1422 91.1459 72.0015 87.6249 72.0015H40.6072Z"
+        fill="#B3B3B3"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M49.4123 2.02335C51.8178 -0.55232 55.8521 -0.686894 58.4233 1.72277C60.9945 4.13244 61.1288 8.17385 58.7234 10.7495L15.9281 56.5729C11.2772 61.552 11.7866 69.5738 17.1458 74.8292L36.9093 94.2091C39.4254 96.6764 39.4685 100.72 37.0055 103.24C34.5425 105.761 30.5061 105.804 27.99 103.337L8.22642 83.9567C-1.9248 74.0021 -2.93616 58.0741 6.61739 47.8463L49.4123 2.02335Z"
+        fill="black"
+      />
+    </svg>
+  );
+}
 
 function ProfilePhoto({ src, alt }) {
   return (
@@ -69,7 +92,7 @@ export default function Sidebar({ active, onSelect }) {
         <div className="mt-5 flex justify-center gap-2.5">
   <SocialIcon Icon={LinkedinIcon} href={profile.linkedin} />
   <SocialIcon Icon={GithubIcon} href={profile.github} />
-  <SocialIcon Icon={Globe} href={profile.portfolio} />
+  <SocialIcon Icon={LeetcodeIcon} href={profile.portfolio} />
   <SocialIcon Icon={Mail} href={`mailto:${profile.email}`} />
 </div>
       </div>
@@ -87,19 +110,19 @@ export default function Sidebar({ active, onSelect }) {
                     onSelect(key);
                     setOpen(false);
                   }}
-                  className={`group w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[13.5px] transition-colors ${
-                    isActive
-                      ? "bg-navy text-paper shadow-sm"
-                      : "text-navy/80 hover:bg-navy/[0.06]"
-                  }`}
+                 className={`group w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[13.5px] transition-colors ${
+  isActive
+    ? "bg-oxblood text-paper shadow-sm"
+    : "text-navy/80 hover:bg-navy/[0.06]"
+}`}
                 >
                   <span
-                    className={`font-mono text-[10px] w-4 shrink-0 ${
-                      isActive ? "text-brass" : "text-slate-light group-hover:text-brass"
-                    }`}
-                  >
-                    {roman}
-                  </span>
+  className={`font-mono text-[10px] w-4 shrink-0 ${
+    isActive ? "text-paper/70" : "text-slate-light group-hover:text-brass"
+  }`}
+>
+  {roman}
+</span>
                   <Icon size={15} strokeWidth={1.75} className="shrink-0" />
                   <span className="font-medium">{label}</span>
                 </button>
