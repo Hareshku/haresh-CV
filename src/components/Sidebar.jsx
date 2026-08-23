@@ -1,4 +1,5 @@
-import {Award, GraduationCap, Briefcase, FlaskConical, Users, Sparkles, Mail, X, Menu } from "lucide-react";
+import { Award, GraduationCap, Briefcase, FlaskConical, Users, Sparkles, Mail, X, Menu } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import { profile } from "../data/cv";
 import { useState } from "react";
 import profilePic from "../assets/profile.jpeg";
@@ -18,15 +19,6 @@ function GithubIcon(props) {
     </svg>
   );
 }
-
-const NAV = [
-  { key: "achievements", label: "Achievements", icon: Award, roman: "I" },
-  { key: "education", label: "Education", icon: GraduationCap, roman: "II" },
-  { key: "experience", label: "Experience", icon: Briefcase, roman: "III" },
-  { key: "projects", label: "Projects", icon: FlaskConical, roman: "IV" },
-  { key: "teaching", label: "Teaching & Leadership", icon: Users, roman: "V" },
-  { key: "skills", label: "Skills", icon: Sparkles, roman: "VI" },
-];
 
 function LeetcodeIcon(props) {
   return (
@@ -51,16 +43,21 @@ function LeetcodeIcon(props) {
   );
 }
 
+const NAV = [
+  { path: "/achievements", label: "Achievements", icon: Award, roman: "I" },
+  { path: "/education", label: "Education", icon: GraduationCap, roman: "II" },
+  { path: "/experience", label: "Experience", icon: Briefcase, roman: "III" },
+  { path: "/projects", label: "Projects", icon: FlaskConical, roman: "IV" },
+  { path: "/teaching", label: "Teaching & Leadership", icon: Users, roman: "V" },
+  { path: "/skills", label: "Skills", icon: Sparkles, roman: "VI" },
+];
+
 function ProfilePhoto({ src, alt }) {
   return (
     <div className="relative mx-auto h-40 w-40">
       <div className="absolute inset-0 rounded-full border border-brass/50" />
       <div className="absolute inset-[3px] rounded-full border-2 border-navy overflow-hidden">
-        <img
-          src={src}
-          alt={alt}
-          className="h-full w-full object-cover"
-        />
+        <img src={src} alt={alt} className="h-full w-full object-cover" />
       </div>
     </div>
   );
@@ -79,7 +76,7 @@ function SocialIcon({ Icon, href }) {
   );
 }
 
-export default function Sidebar({ active, onSelect }) {
+export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
   const content = (
@@ -90,63 +87,52 @@ export default function Sidebar({ active, onSelect }) {
         <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-slate">{profile.title}</p>
 
         <div className="mt-5 flex justify-center gap-2.5">
-  <SocialIcon Icon={LinkedinIcon} href={profile.linkedin} />
-  <SocialIcon Icon={GithubIcon} href={profile.github} />
-  <SocialIcon Icon={LeetcodeIcon} href={profile.portfolio} />
-  <SocialIcon Icon={Mail} href={`mailto:${profile.email}`} />
-</div>
+          <SocialIcon Icon={LinkedinIcon} href={profile.linkedin} />
+          <SocialIcon Icon={GithubIcon} href={profile.github} />
+          <SocialIcon Icon={LeetcodeIcon} href={profile.portfolio} />
+          <SocialIcon Icon={Mail} href={`mailto:${profile.email}`} />
+        </div>
       </div>
 
       <div className="mx-7 h-px bg-line" />
 
       <nav className="flex-1 px-5 pt-6">
         <ul className="space-y-1">
-          {NAV.map(({ key, label, icon: Icon, roman }) => {
-            const isActive = active === key;
-            return (
-              <li key={key}>
-                <button
-                  onClick={() => {
-                    onSelect(key);
-                    setOpen(false);
-                  }}
-                 className={`group w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[13.5px] transition-colors ${
-  isActive
-    ? "bg-oxblood text-paper shadow-sm"
-    : "text-navy/80 hover:bg-navy/[0.06]"
-}`}
-                >
-                  <span
-  className={`font-mono text-[10px] w-4 shrink-0 ${
-    isActive ? "text-paper/70" : "text-slate-light group-hover:text-brass"
-  }`}
->
-  {roman}
-</span>
-                  <Icon size={15} strokeWidth={1.75} className="shrink-0" />
-                  <span className="font-medium">{label}</span>
-                </button>
-              </li>
-            );
-          })}
+          {NAV.map(({ path, label, icon: Icon, roman }) => (
+            <li key={path}>
+              <NavLink
+                to={path}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `group w-full flex items-center gap-3 rounded-md px-3 py-2.5 text-left text-[13.5px] transition-colors ${
+                    isActive ? "bg-oxblood text-paper shadow-sm" : "text-navy/80 hover:bg-navy/[0.06]"
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span
+                      className={`font-mono text-[10px] w-4 shrink-0 ${
+                        isActive ? "text-paper/70" : "text-slate-light group-hover:text-brass"
+                      }`}
+                    >
+                      {roman}
+                    </span>
+                    <Icon size={15} strokeWidth={1.75} className="shrink-0" />
+                    <span className="font-medium">{label}</span>
+                  </>
+                )}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      <div className="px-7 pb-7 pt-4">
-        <div className="h-px bg-line mb-4" />
-        <p className="text-[10.5px] text-slate-light leading-relaxed">
-          {profile.location}
-        </p>
-        <p className="mt-1 text-[10px] text-slate-light/80">
-          © 2026 · {profile.name} · Curriculum Vitae
-        </p>
-      </div>
     </div>
   );
 
   return (
     <>
-      {/* Mobile top bar */}
       <div className="lg:hidden sticky top-0 z-30 flex items-center justify-between bg-paper/95 backdrop-blur border-b border-line px-4 py-3">
         <span className="font-display text-lg text-navy">{profile.name}</span>
         <button
@@ -157,12 +143,10 @@ export default function Sidebar({ active, onSelect }) {
         </button>
       </div>
 
-      {/* Desktop sidebar */}
       <aside className="hidden lg:block lg:w-[280px] lg:shrink-0 lg:sticky lg:top-0 lg:h-screen border-r border-line bg-paper">
         {content}
       </aside>
 
-      {/* Mobile drawer */}
       {open && (
         <div className="lg:hidden fixed inset-0 z-40">
           <div className="absolute inset-0 bg-navy/40" onClick={() => setOpen(false)} />
