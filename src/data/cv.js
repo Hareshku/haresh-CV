@@ -35,8 +35,8 @@ export const achievements = [
     tag: "Leadership Fellowship",
     category: "Harvard University",
     title: "Aspire Leaders Program",
-    detail: "Selected for a global leadership development program identifying high-potential emerging leaders.",
-    link: "https://drive.google.com/file/d/1OySAjWegpEBcV_zajBPSehO0WuZPMpUv/view?usp=sharing", // TODO: replace with certificate / proof URL
+    detail: "Alumnus of Harvard University’s Aspire Leaders Program, a global leadership development program for high-potential emerging leaders.",
+    link: "https://drive.google.com/file/d/1OAxjVsvAG_q-bV_GFwu78y8f7Nuspaw2/view?usp=sharing", // TODO: replace with certificate / proof URL
   }, 
   {
     tag: "Scholarship",
@@ -58,7 +58,7 @@ export const achievements = [
     category: "Lablab.ai",
     title: "International Participation",
     detail: "Participated in 10+ international AI hackathons and coding competitions, collaborating with global teams to deliver production-ready AI solutions under tight deadlines.",
-    link: "https://drive.google.com/file/d/1toMPirwvp_Qq8iJLJPeIDN-QjeWWBufm/view?usp=sharing", // TODO: replace with certificate / proof URL
+    link: "https://drive.google.com/file/d/1CrMY3JqpVZPqW4cipdYGCQkbR8S8m22l/view?usp=sharing", // TODO: replace with certificate / proof URL
   },
   {
     tag: "Coding Competition",
@@ -236,6 +236,18 @@ export const projects = [
 
 
 export const teaching = [
+   {
+    role: "Lead Trainer - Master DSA with LeetCode",
+    university: "CA, USA",
+    program: "iCodeGuru",
+    period: "19 Oct 2026 - Present",
+    link: "https://docs.google.com/spreadsheets/d/1z0yfEekz-9mlZV1M5ovOGkEScCDg9tBf9x7YuWvRXlk/edit?usp=sharing",
+    points: [
+      "Teaching Data Structures and Algorithms (DSA), from fundamental concepts to advanced problem-solving techniques.",
+      "Guiding students through time and space complexity analysis, data structure operations, and algorithm design.",
+      "Helping students strengthen problem-solving skills through hands-on coding exercises and LeetCode challenges.",
+    ],
+  },
   {
     role: "Section Leader (Trainer)",
     university: "Stanford University",
